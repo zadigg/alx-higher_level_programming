@@ -1,3 +1,13 @@
 #!/usr/bin/python3
+
+
 def no_c(my_string):
-    return ''.join(c for c in my_string if c not in 'cC')
+    """
+    Function that removes  all character c and C
+    Parameters:
+    @my_string: the list
+    Return: the copy of the original if failed
+    """
+    if my_string is not None:
+        return ''.join(filter(lambda c: c.lower() != 'c', my_string))
+    return None
